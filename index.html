@@ -1,41 +1,35 @@
 <!DOCTYPE html>
 <html>
-<title>Wallentin Rosén</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="index.css">
-<link rel="stylesheet" href="crt.css">
-<body class="crt">
-    <div id="header">
-        <img src="http://33.media.tumblr.com/4f74607df3da8ee31020c51b5ae1346f/tumblr_nu1521qKe91ud945wo1_100.gif">
-        <h1>Wallentin Rosén</h1>
-        <img src="https://uploads.guim.co.uk/2016/10/27/smoking-skull.gif">
+    <title>Wallentin Rosén</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="crt.css">
+    <script src="index.js"></script> 
+    <body class="crt">
+        <div id="header">
+            <img src="http://33.media.tumblr.com/4f74607df3da8ee31020c51b5ae1346f/tumblr_nu1521qKe91ud945wo1_100.gif">
+            <h1>Wallentin Rosén</h1>
+            <img src="https://uploads.guim.co.uk/2016/10/27/smoking-skull.gif">
 
-    </div>
-    <div id="content">
-        <div class="sidebar">
-            <label> home</label>
-            <label> contact</label>
         </div>
-        <div class="project">
-            <div class="project-title">
-                To be implemeted
+        <div id="content" >
+            <div class="project" onload="getRepos()">
+                <h1 class="project-title">
+                    To be implemeted
+                </h1>
+                <div class="project-desc">
+                    
+                </div>
+                <div class="buttons">
+                    <button class="button" onclick="prev_proj()"><</button>
+                    <a id="gh" href="https://www.google.com/search?channel=fs&client=ubuntu&q=github+logo#imgrc=thYE3r73bm1jUM">
+                        <img id="gh-logo" src="https://1000logos.net/wp-content/uploads/2021/05/GitHub-logo.png" >
+                    </a>
+                    <button class="button" onclick="next_proj()">></button>
+                </div>
             </div>
-            <div class="project-desc">
-                
-            </div>
-            <div class="buttons">
-                <button><</button>
-                <button>></button>
-            </div>
+            
         </div>
-        
-    </div>
-    <div id="footer">
-        <img src="https://i.pinimg.com/originals/96/d2/29/96d229d8c1be97c0d8c297b16a65ae0d.gif">
-        <h1>Contact</h1>
-
-    </div>
-    
-</body>
+    </body>
 </html>
