@@ -27,32 +27,57 @@ class Project {
 }
 
 window.onload = (event) => {
-    setupContent();
   };
 
+function projectButtonClicked(){
+    document.getElementById("content").style.display = "flex";
+    document.getElementById("about").style.display = "none";
+    document.getElementById("contact").style.display = "none";
+    setupContent();
+}
+
+function showContact(){
+    console.log("contacts");
+    document.getElementById("content").style.display = "none";
+    document.getElementById("about").style.display = "none";
+    document.getElementById("contact").style.display = "flex";
+
+}
+
+function showAbout(){
+    document.getElementById("content").style.display = "none";
+    document.getElementById("about").style.display = "flex";
+    document.getElementById("contact").style.display = "none";
+    
+}
+
 async function setupContent(){
-    var reposJson = await getRepos();
-    console.log(reposJson);
-    if(reposJson != -1){
-        var loader = document.getElementById("load");
-        loader.hidden = false;
-        for (let index = 0; index < reposJson.length; index++) {
-            var readme = await getReadme(reposJson[index].name); 
-            var lang = await getLanguages(reposJson[index].languages_url);
-            if(readme != -1){
-                projects.push(new Project(reposJson[index].name, readme, reposJson[index].owner.html_url, lang));
-
-            }else{
-                projects.push(new Project(reposJson[index].name, "Could not catch README", reposJson[index].owner.html_url, lang));
-
+    if(projects.length == 0){
+        var reposJson = await getRepos();
+        console.log(reposJson);
+        if(reposJson != -1){
+            var loader = document.getElementById("load");
+            loader.hidden = false;
+            for (let index = 0; index < reposJson.length; index++) {
+                var readme = await getReadme(reposJson[index].name); 
+                var lang = await getLanguages(reposJson[index].languages_url);
+                if(readme != -1){
+                    projects.push(new Project(reposJson[index].name, readme, reposJson[index].owner.html_url, lang));
+    
+                }else{
+                    projects.push(new Project(reposJson[index].name, "Could not catch README", reposJson[index].owner.html_url, lang));
+    
+                }
+                loader.innerHTML = Math.floor((index / reposJson.length)*100 ) + "%";
+                
             }
-            loader.innerHTML = Math.floor(reposJson.length / index) + "%";
-            
+            loader.hidden = true;
+    
+            showProject(current_proj);
+    
         }
-        loader.hidden = true;
-
-        showProject(0);
-
+    }else{
+        showProject(current_proj);
     }
 }
 

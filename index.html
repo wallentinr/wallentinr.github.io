@@ -11,12 +11,16 @@
             <img src="http://33.media.tumblr.com/4f74607df3da8ee31020c51b5ae1346f/tumblr_nu1521qKe91ud945wo1_100.gif">
             <h1>Wallentin Rosén</h1>
             <img src="https://uploads.guim.co.uk/2016/10/27/smoking-skull.gif">
+            <div class="buttons">
+                <button class="button"  onclick="projectButtonClicked()">Projects</button>
+                <button class="button" onclick="showContact()">Contacts</button>
+                <button class="button"  onclick="showAbout()">About</button>
+            </div>
 
         </div>
-        <div id="content" >
-            <div class="project" onload="getRepos()">
+        <div id="content" class="page">
+            <div class="project">
                 <h1 class="project-title">
-                    To be implemeted
                 </h1>
                 <label hidden="true" id="load">0%</label>
                 <div class="project-desc">
@@ -32,6 +36,15 @@
                 </div>
             </div>
             
+        </div>
+        <div id="contact" class="page">
+            <img src="https://i.pinimg.com/originals/96/d2/29/96d229d8c1be97c0d8c297b16a65ae0d.gif">
+            <h1>wallentin.rosen@gmail.com</h1>
+
+        </div>
+        <div id="about" class="page">
+            <img src="https://cdn.vox-cdn.com/uploads/chorus_asset/file/8688491/hiE5vMs.gif">
+
         </div>
     </body>
 </html>
