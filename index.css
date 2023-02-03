@@ -1,0 +1,98 @@
+
+body{
+    height: 100vh;
+    width: 100vw;
+    background-color: #02765c;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin:0;
+    padding:0;
+}
+
+#header{
+    background-color: #24316b;
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content:space-between;
+    color: white;
+    width: 100vw;
+}
+
+
+
+#content{
+    display: none;
+    flex-direction: row;
+    
+}
+
+#contact{
+    background-color: pink;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+#about{
+    background-color:#02765c;
+    display: flex;
+
+}
+
+.page{
+    justify-content: center;
+    width: 100vw;
+    height: 90vh;
+}
+
+
+.project{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f8f8f8;
+    color: black;
+    justify-content: space-between;
+    padding: 2%;
+}
+
+.project-title{
+
+}
+
+.project-desc{
+    overflow: scroll;
+
+}
+
+
+.buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.button{
+    font-size: xx-large;
+    padding: 1vw;
+}
+
+.project-text{
+    margin-left: 30px;
+}
+
+.margin-top{
+    margin-top: 80px;
+}
+
+#gh{
+    width: 10%;
+}
+#gh-logo{
+    width: 100%;
+}

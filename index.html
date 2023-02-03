@@ -1,16 +1,50 @@
 <!DOCTYPE html>
 <html>
-<body style=opacity:1;>
-  <div style= opacity:1; background="space.jpg">
-  
-  <div style="opacity:1.0;>
-    <h1 style="text-align: center;">
-    Carl!
+    <title>Wallentin Rosén</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="crt.css">
+    <script src="index.js"></script> 
+    <body class="crt">
+        <div id="header">
+            <img src="http://33.media.tumblr.com/4f74607df3da8ee31020c51b5ae1346f/tumblr_nu1521qKe91ud945wo1_100.gif">
+            <h1>Wallentin Rosén</h1>
+            <img src="https://uploads.guim.co.uk/2016/10/27/smoking-skull.gif">
+            <div class="buttons">
+                <button class="button"  onclick="projectButtonClicked()">Projects</button>
+                <button class="button" onclick="showContact()">Contacts</button>
+                <button class="button"  onclick="showAbout()">About</button>
+            </div>
 
+        </div>
+        <div id="content" class="page">
+            <div class="project">
+                <h1 class="project-title">
+                </h1>
+                <label hidden="true" id="load">0%</label>
+                <div class="project-desc">
+                    
+                </div>
+                <div class="buttons">
+                    <button class="button" onclick="prev_proj()"><</button>
+                    <a id="gh" href="https://www.google.com/search?channel=fs&client=ubuntu&q=github+logo#imgrc=thYE3r73bm1jUM">
+                        <img id="gh-logo" src="https://1000logos.net/wp-content/uploads/2021/05/GitHub-logo.png" >
+                    </a>
+                    <label id="languages"></label>
+                    <button class="button" onclick="next_proj()">></button>
+                </div>
+            </div>
+            
+        </div>
+        <div id="contact" class="page">
+            <img src="https://i.pinimg.com/originals/96/d2/29/96d229d8c1be97c0d8c297b16a65ae0d.gif">
+            <h1>wallentin.rosen@gmail.com</h1>
 
-    </h1>
-  </div>
-  </div>
-</body>
+        </div>
+        <div id="about" class="page">
+            <img src="https://cdn.vox-cdn.com/uploads/chorus_asset/file/8688491/hiE5vMs.gif">
+
+        </div>
+    </body>
 </html>
-
